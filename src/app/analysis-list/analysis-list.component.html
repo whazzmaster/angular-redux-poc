@@ -1,0 +1,7 @@
+<ul class="list-group analysis-list">
+  <li *ngFor="let analysis of analyses | async" class="list-group-item"
+    [class.active]="(selected | async)?.id === analysis.id"
+    (click)="handleClick(analysis)">
+    {{analysis.name}}
+  </li>
+</ul>

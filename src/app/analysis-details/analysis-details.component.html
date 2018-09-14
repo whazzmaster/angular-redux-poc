@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h2 *ngIf="analysis | async; else initialContent">
+      {{ (analysis | async)?.name }} ({{ (analysis | async)?.id }})
+    </h2>
+    <ng-template #initialContent>
+      <h1><small class="text-muted">Select an analysis</small></h1>
+    </ng-template>
+  </div>
+</div>
