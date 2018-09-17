@@ -1,27 +1,34 @@
-# ReduxPoc
+# Angular Redux Proof-of-Concept
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This is a little proof-of-concept/toy to better understand how to integrate [redux](https://redux.js.org/) into an Angular 6 application.
 
-## Development server
+## Fetch and Run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the repo, then install the dependencies
 
-## Code scaffolding
+```sh
+$ git clone git@github.com:whazzmaster/angular-redux-poc.git
+$ cd angular-redux-poc
+$ npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Now you may serve the application
 
-## Build
+```sh
+$ ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Then open the application at [http://localhost:4200](http://localhost:4200)
 
-## Running unit tests
+## Areas to Note
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Much of the redux architecture is located under [src/app/state](src/app/state); there you'll find the `reducers` and `actions` directories where we define the application state and the business logic that mutates it.
 
-## Running end-to-end tests
+Check out [`src/app/app.module.ts`](src/app/app.module.ts) to see how we configure the store and how we hook the router into the store.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Look at [`src/app/analysis-details`](src/app/analysis-details) and [`src/app/analysis-list`](src/app/analysis-list) to see how components are connected to the store, and how we use the `Observable` properties in templates.
 
-## Further help
+## Resources
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [redux](https://redux.js.org/): a predictable state container for javascript applications
+- [angular-redux](https://github.com/angular-redux/platform): redux bindings for Angular applications
