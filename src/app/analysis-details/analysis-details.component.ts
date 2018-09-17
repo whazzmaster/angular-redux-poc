@@ -15,7 +15,7 @@ import { AnalysisService } from '../services/analysis.service';
 })
 export class AnalysisDetailsComponent implements OnInit {
   currentId$: Observable<string>;
-  @select(['analysis', 'selected']) analysis: Observable<Analysis>;
+  @select(['analysis', 'selected']) analysis$: Observable<Analysis>;
 
   constructor(private ngRedux: NgRedux<AppState>,
               private route: ActivatedRoute,

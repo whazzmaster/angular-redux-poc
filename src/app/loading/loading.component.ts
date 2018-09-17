@@ -7,7 +7,7 @@ import { select } from '@angular-redux/store';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
-  @select(['network', 'loading']) loading: boolean;
+  @select(['network', 'loading']) loading$: boolean;
 
   constructor() { }
 

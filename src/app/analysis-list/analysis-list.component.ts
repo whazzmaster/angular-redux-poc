@@ -14,8 +14,8 @@ import { NetworkActions, AnalysisActions } from '../state/actions';
   styleUrls: ['./analysis-list.component.css']
 })
 export class AnalysisListComponent implements OnInit {
-  @select(['analysis', 'list']) analyses: Observable<Analysis[]>;
-  @select(['analysis', 'selected']) selected: Observable<Analysis>;
+  @select(['analysis', 'list']) analyses$: Observable<Analysis[]>;
+  @select(['analysis', 'selected']) selected$: Observable<Analysis>;
 
   constructor(private ngRedux: NgRedux<AppState>,
               private router: Router,
